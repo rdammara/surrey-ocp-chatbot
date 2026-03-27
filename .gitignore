@@ -1,0 +1,19 @@
+#Security
+.env
+.streamlit/secrets.toml
+
+#Virtual Environment
+venv/
+env/
+
+#Python Cache
+__pycache__/
+*.pyc
+*.pyo
+
+#Database (Don't upload the heavy local vector store)
+chroma_db/
+
+#OS generated files
+.DS_Store
+Thumbs.db
