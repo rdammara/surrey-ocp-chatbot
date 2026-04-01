@@ -7,7 +7,7 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.llms.google_genai import GoogleGenAI
 from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
 
-# 1. Setup paths
+#File directory setup paths
 ROOT_DIR = Path(__file__).parent.parent
 load_dotenv(ROOT_DIR / ".env")
 
