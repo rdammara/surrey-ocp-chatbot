@@ -12,11 +12,11 @@ ROOT_DIR = Path(__file__).parent.parent
 load_dotenv(ROOT_DIR / ".env")
 
 def get_query_engine():
-    """Loads the database and connects it to Gemini 3 Flash."""
+    """Loads database...."""
     
     # 2. Configure Models (Must match ingestion.py exactly!)
     Settings.llm = GoogleGenAI(
-        model="models/gemini-3-flash-preview", 
+        model="models/gemini-2.5-flash", 
         api_key=os.getenv("GOOGLE_API_KEY"),
         max_retries = 3
     )
