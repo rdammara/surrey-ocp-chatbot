@@ -15,3 +15,5 @@ chromadb>=0.6.0
 
 # Environment Variables (For your API Key)
 python-dotenv>=1.2.2
+
+protobuf==3.20.3
