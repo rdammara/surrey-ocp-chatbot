@@ -1,5 +1,6 @@
 import os
 import chromadb
+import streamlit as st
 from pathlib import Path
 from dotenv import load_dotenv
 from llama_index.core import VectorStoreIndex, Settings
@@ -10,6 +11,12 @@ from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
 #File directory setup paths
 ROOT_DIR = Path(__file__).parent.parent
 load_dotenv(ROOT_DIR / ".env")
+
+#grab the key on local OR cloud
+try:
+    GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+except (FileNotFoundError, KeyError):
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 def get_query_engine():
     """Loads database...."""
