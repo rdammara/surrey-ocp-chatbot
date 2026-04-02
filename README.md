@@ -10,7 +10,7 @@ This project addresses the complexity of urban planning documentation by providi
 Using the **Gemini 3 Flash** LLM and a **RAG (Retrieval-Augmented Generation)** pipeline, this web app allows residents to ask natural language questions and receive accurate, cited answers directly from the 500+ page OCP and its associated engagement reports (Phases 1-4).
 
 ## Tech Stack
-* **Language Model:** Gemini 3 Flash (via Google AI Studio)
+* **Language Model:** Gemini 2.5 Flash
 * **Framework:** LlamaIndex (Data Orchestration & RAG)
 * **Vector Database:** ChromaDB (Local Vector Storage)
 * **Frontend:** Streamlit (Web Interface)
