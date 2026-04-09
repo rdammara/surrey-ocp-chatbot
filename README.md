@@ -7,7 +7,7 @@
 ## Project Overview
 This project addresses the complexity of urban planning documentation by providing an accessible, AI-driven interface for the **City of Surrey’s 2050 Official Community Plan (Draft 2026)**. 
 
-Using the **Gemini 3 Flash** LLM and a **RAG (Retrieval-Augmented Generation)** pipeline, this web app allows residents to ask natural language questions and receive accurate, cited answers directly from the 500+ page OCP and its associated engagement reports (Phases 1-4).
+Using the **Gemini 2.5 Flash** LLM and a **RAG (Retrieval-Augmented Generation)** pipeline, this web app allows residents to ask natural language questions and receive accurate, cited answers directly from the 500+ page OCP and its associated engagement reports (Phases 1-4).
 
 ## Tech Stack
 * **Language Model:** Gemini 2.5 Flash
