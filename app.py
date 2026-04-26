@@ -120,8 +120,12 @@ if st.session_state.messages and st.session_state.messages[-1]["role"] == "user"
                 #Prompt Padding for certain user prompts to dirrect to more specific knowledge sources
                 invisible_rules = (
                     "\n\n---\nCRITICAL INSTRUCTIONS TO FOLLOW RIGHT NOW:\n"
-                    "1. If the user's question asks about land use, density, or building heights, YOU MUST append this exact text at the very bottom of your answer: '*Disclaimer: The OCP is a high-level guiding document. For specific zoning regulations, legal allowances, or building permits for your property, please consult official City of Surrey staff.*'\n"
-                    "2. If the user's question contains a specific street address, DO NOT answer it. Refuse and direct them to the City of Surrey COSMOS mapping system."
+                    "1. JURISDICTION (Transit/Infrastructure): If the user asks about public transit operations, bus schedules, or SkyTrain construction, explain that TransLink manages transit delivery, while the City's OCP only plans land use. You MUST provide this exact clickable link: [TransLink Canada](https://www.translink.ca/).\n"
+                    "2. SSMUH / BILL 44: If the user asks about Small-Scale Multi-Unit Housing, Bill 44, or building multiplexes/secondary suites on single-family lots, explain that BC has new legislation for this and provide this exact clickable link: [BC Small-Scale Multi-Unit Housing](https://www2.gov.bc.ca/gov/content/housing-tenancy/local-governments-and-housing/housing-initiatives/smale-scale-multi-unit-housing).\n"
+                    "3. OCP vs. DEVELOPMENT: If the user asks about specific new construction projects or active development applications, explain that the OCP is a high-level 'vision' document. Direct them to the City's Development Inquiry portal for active construction information.\n"
+                    "4. SPECIFIC ADDRESSES: If the user's question contains a specific street address, DO NOT guess or answer. Refuse politely and direct them to the official City of Surrey COSMOS mapping system (https://cosmos.surrey.ca/external/) for exact property designations.\n"
+                    "5. LIABILITY DISCLAIMER: If the user's question asks about land use, density, or building heights generally, YOU MUST append this exact text at the very bottom of your answer: '*Disclaimer: The OCP is a high-level guiding document. For specific zoning regulations, legal allowances, or building permits for your property, please consult official City of Surrey staff.*'"
+                    
                 )
                 enforced_prompt = user_prompt + invisible_rules
                 
