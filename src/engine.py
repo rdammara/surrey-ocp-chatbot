@@ -12,7 +12,7 @@ from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
 ROOT_DIR = Path(__file__).parent.parent
 load_dotenv(ROOT_DIR / ".env")
 
-#grab the key on local OR cloud
+#grab the key on local OR cloud (in this case Streamlit)
 try:
     GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 except (FileNotFoundError, KeyError):
@@ -21,11 +21,25 @@ except (FileNotFoundError, KeyError):
 def get_query_engine():
     """Loads database...."""
     
-    # 2. Configure Models (Must match ingestion.py exactly!)
+    #Configure Models (Must match ingestion.py exactly!)
     Settings.llm = GoogleGenAI(
         model="models/gemini-2.5-flash", 
         api_key=os.getenv("GOOGLE_API_KEY"),
-        max_retries = 3
+        max_retries = 3,
+        request_options = {"timeout": 15.0},
+        system_instruction=(
+            "You are an expert urban planning assistant for the City of Surrey. "
+            "Your primary goal is to help residents understand the 2050 Official Community Plan (OCP). "
+            "Base all your answers strictly on the retrieved context. "
+            "\n\nCRITICAL RULES:"
+            "\n1. LIABILITY DISCLAIMER: If the user asks about land use, building heights, or property rules, "
+            "you must append this exact disclaimer at the bottom of your response: "
+            "'*Disclaimer: The OCP is a high-level guiding document. For specific zoning regulations, "
+            "legal allowances, or building permits for your property, please consult official City of Surrey staff.*' "
+            "\n2. SPECIFIC ADDRESSES: The OCP does not dictate rules for individual houses. If a user asks about "
+            "a specific street address, you must kindly tell them you cannot look up individual parcels and direct "
+            "them to use the official City of Surrey COSMOS mapping system."
+        )
     )
     # Note: Use 'gemini-embedding-001' to match your successful ingestion
     Settings.embed_model = GoogleGenAIEmbedding(model_name="models/gemini-embedding-001")
