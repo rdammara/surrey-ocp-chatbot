@@ -21,41 +21,39 @@ except (FileNotFoundError, KeyError):
 def get_query_engine():
     """Loads database...."""
     
-    #Configure Models (Must match ingestion.py exactly!)
+    # 1. Configure Models (Using the safely captured GOOGLE_API_KEY variable)
     Settings.llm = GoogleGenAI(
         model="models/gemini-2.5-flash", 
-        api_key=os.getenv("GOOGLE_API_KEY"),
+        api_key=GOOGLE_API_KEY,  # <-- FIX 1: Using your safe variable
         max_retries = 3,
         request_options = {"timeout": 15.0},
         system_instruction=(
             "You are an expert urban planning assistant for the City of Surrey. "
             "Your primary goal is to help residents understand the 2050 Official Community Plan (OCP). "
-            "Base all your answers strictly on the retrieved context. "
-            "\n\nCRITICAL RULES:"
-            "\n1. LIABILITY DISCLAIMER: If the user asks about land use, building heights, or property rules, "
-            "you must append this exact disclaimer at the bottom of your response: "
-            "'*Disclaimer: The OCP is a high-level guiding document. For specific zoning regulations, "
-            "legal allowances, or building permits for your property, please consult official City of Surrey staff.*' "
-            "\n2. SPECIFIC ADDRESSES: The OCP does not dictate rules for individual houses. If a user asks about "
-            "a specific street address, you must kindly tell them you cannot look up individual parcels and direct "
-            "them to use the official City of Surrey COSMOS mapping system."
+            "Base all your answers strictly on the retrieved context."
+            # Removed the duplicate rules because app.py handles them perfectly now!
         )
     )
-    # Note: Use 'gemini-embedding-001' to match your successful ingestion
-    Settings.embed_model = GoogleGenAIEmbedding(model_name="models/gemini-embedding-001")
+    
+    # FIX 2: Explicitly pass the key to the embedding model
+    Settings.embed_model = GoogleGenAIEmbedding(
+        model_name="models/gemini-embedding-001",
+        api_key=GOOGLE_API_KEY 
+    )
 
-    # 3. Connect to the existing ChromaDB folder
+    # FIX 3: Turn off ChromaDB telemetry to stop the local PC freezing
     db_path = str(ROOT_DIR / "chroma_db")
-    chroma_client = chromadb.PersistentClient(path=db_path)
+    chroma_client = chromadb.PersistentClient(
+        path=db_path,
+        settings=chromadb.config.Settings(anonymized_telemetry=False)
+    )
     
     # Retrieve the collection we created earlier
     chroma_collection = chroma_client.get_collection("surrey_ocp")
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
     
-    # 4. Load the index from the vector store
+    # Load the index from the vector store
     index = VectorStoreIndex.from_vector_store(vector_store)
 
-    # 5. Return the engine 
-    # 'similarity_top_k=5' means it pulls the 5 most relevant 
-    # paragraphs from your PDFs to answer each question.
-    return index.as_query_engine(similarity_top_k = 2, streaming = True)
+    # Return the engine 
+    return index.as_query_engine(similarity_top_k=2, streaming=True)
