@@ -34,26 +34,39 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-with st.sidebar:
-    st.header("About This Tool")
-    st.markdown("This AI assistant helps residents navigate the Surrey 2050 Official Community Plan.")
+#with st.sidebar:
+#    st.header("About This Tool")
+#    st.markdown("This AI assistant helps residents navigate the Surrey 2050 Official Community Plan.")
     
-    st.divider() 
+#    st.divider() 
     
-    st.markdown("### Official Resources")
-    st.markdown("Need to check the exact land-use designation for your specific property?")
+#    st.markdown("### Official Resources")
+#    st.markdown("Need to check the exact land-use designation for your specific property?")
     # Adds a clickable button directly to the Surrey map tool
-    st.link_button("🗺️ Open Surrey COSMOS Lookup Tool", "https://cosmos.surrey.ca/external/")
+#    st.link_button("🗺️ Open Surrey COSMOS Lookup Tool", "https://cosmos.surrey.ca/external/")
 
-    st.divider()
+#    st.divider()
 
-    st.markdown("### Session")
-    if st.button("Clear & Refresh chat"):
-        st.session_state.messages = []
-        st.rerun()
+#    st.markdown("### Session")
+#    if st.button("Clear & Refresh chat"):
+#        st.session_state.messages = []
+#        st.rerun()
 
 st.markdown("<h1 class='main-title'>Surrey 2050 OCP Explorer</h1>", unsafe_allow_html=True)
 st.markdown("<p class='center-text'>Ask questions about the Official Community Plan and Engagement Reports.</p>", unsafe_allow_html=True)
+
+# --- NEW: Main Page Action Bar ---
+# We create two columns. [1, 1] means they are equal width.
+col_action1, col_action2 = st.columns([1, 1])
+
+with col_action1:
+    # use_container_width=True makes the button stretch to fill its half of the screen
+    st.link_button("🗺️ Open Surrey COSMOS Map", "https://cosmos.surrey.ca/external/", use_container_width=True)
+
+with col_action2:
+    if st.button("Clear & Refresh Chat", use_container_width=True):
+        st.session_state.messages = []
+        st.rerun()
 
 
 
