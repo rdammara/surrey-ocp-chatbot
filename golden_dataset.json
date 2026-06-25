@@ -1,0 +1,154 @@
+{
+    "examples": [
+        {
+            "query": "According to the \"Transportation\" section (E.1), what is the overarching goal, and how do the four listed objectives collectively aim to achieve this goal?",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# E.1\n\n# Transportation\n\nGoal: Safe, efficient, and connected transportation that provides mobility choices for all.\n\n# Objectives:\n\n- Deliver a safe, efficient, and accessible transportation network.\n- Provide greater transportation choice.\n- Make public transit convenient.\n- Reduce traffic congestion."
+            ],
+            "reference_answer": "According to the \"Transportation\" section (E.1), the overarching goal is: **Safe, efficient, and connected transportation that provides mobility choices for all.**\n\nThe four listed objectives collectively aim to achieve this goal by:\n*   **Delivering a safe, efficient, and accessible transportation network:** This establishes the fundamental infrastructure that is reliable and usable for everyone.\n*   **Providing greater transportation choice and making public transit convenient:** These objectives directly address the \"mobility choices for all\" aspect by expanding options beyond private vehicles and making key alternatives like public transit more appealing and practical.\n*   **Reducing traffic congestion:** This contributes to an \"efficient\" and \"connected\" transportation system by ensuring smoother flow and better utilization of the network, allowing people to move more freely and effectively use their chosen mode of transport.\n\nIn essence, the objectives work together to build a robust, diverse, and smoothly operating transportation system that offers various practical ways for all individuals to get around safely and efficiently.",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "According to the document, what is the main subject of the \"IMPORTANT NOTICE\" and where can individuals go to join the conversation about this topic?",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# Bofe Juite\n\n# IMPORTANT NOTICE\n\nWe're updating the city's Official Community Plan.\n\n# Holiday Hours\n\nJoin the conversation surrey.ca/ocp\n\n# B Pop-Up Engagement\n\n# SIGN UP\n\nfor an arts program\n\n# WHAT WE HEARD REPORT\n\n9"
+            ],
+            "reference_answer": "According to the document, the main subject of the \"IMPORTANT NOTICE\" is that the city's Official Community Plan is being updated. Individuals can go to surrey.ca/ocp to join the conversation about this topic.",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "According to the \"Draft Land Use Summary,\" identify two distinct differences between the \"SUBURBAN\" and \"URBAN\" residential designations in Surrey, focusing on the types of housing permitted and the associated community characteristics or services.",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "Surrey OCP Update\n# Draft Land Use Summary\n\n# Residential Designations\n\nThe majority of Surrey falls within the residential designations: Suburban and Urban. These are Surrey\u2019s neighbourhoods. Over time, they will undergo change as new homes are built. More significant change is limited to areas that are well-served by public transit and the arterial road network.\n\n# SUBURBAN\n\nSUBURBAN is used for low-density suburban residential neighbourhoods. Suburban neighbourhoods contain lots that are generally a quarter acre to a half acre in size with Small-Scale Multi-Unit Housing such as:\n\n- Single detached houses with or without suites,\n- Duplexes with or without suites, and\n- Backyard Housing such as garden suites and coach houses.\n\n# URBAN\n\nURBAN is used for urban neighbourhoods containing a range of housing options, frequent transit service, and walkable commercial amenities. Housing in urban neighbourhoods includes:\n\n- Single detached houses with or without suites,\n- Duplexes with or without suites,\n- Houseplexes,\n- Backyard Housing such as Garden Suites and Coach Houses,\n- Rowhouses, and\n- Townhouses.\n\nIn locations served by transit or arterial roads, 4-storey residential and mixed-use (with ground floor commercial) apartment buildings may be permitted."
+            ],
+            "reference_answer": "Based on the \"Draft Land Use Summary,\" here are two distinct differences between the \"SUBURBAN\" and \"URBAN\" residential designations:\n\n1.  **Types of Housing Permitted:**\n    *   **SUBURBAN:** Primarily permits low-density housing options, specifically listing single detached houses (with or without suites), duplexes (with or without suites), and backyard housing (garden suites and coach houses). It emphasizes lots generally a quarter acre to a half acre in size.\n    *   **URBAN:** Allows for a broader and denser range of housing options. In addition to the types found in Suburban, Urban areas also permit houseplexes, rowhouses, townhouses, and in locations served by transit or arterial roads, 4-storey residential and mixed-use apartment buildings.\n\n2.  **Associated Community Characteristics and Services:**\n    *   **SUBURBAN:** Characterized as \"low-density suburban residential neighbourhoods\" with larger lot sizes, implying a more spread-out residential environment with less emphasis on immediate, integrated services.\n    *   **URBAN:** Defined by the presence of \"frequent transit service\" and \"walkable commercial amenities,\" indicating a more connected, accessible, and service-rich urban environment.",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "According to the \"Community Infrastructure\" chapter, what is the primary goal for community infrastructure development, and how do the outlined objectives collectively contribute to achieving this goal?",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# Community Infrastructure\n\nGoal: Develop community infrastructure and facilities throughout the city to meet the needs of a diverse and growing population.\n\n# Objectives:\n\n- Shape neighbourhoods and communities in a manner that fosters social connection, livability, and safety.\n- Provide a public space network that is accessible, centrally located, and well connected.\n- Establish and grow arts and culture as part of the physical and social make-up of the City.\n- Advance a heritage program that is inclusive and equitable.\n- Advocate for and help guide the provision of non-municipal community facilities and services."
+            ],
+            "reference_answer": "According to the \"Community Infrastructure\" chapter, the primary goal for community infrastructure development is to:\n\n**Goal:** Develop community infrastructure and facilities throughout the city to meet the needs of a diverse and growing population.\n\nThe outlined objectives collectively contribute to achieving this goal by addressing various facets of community well-being and development:\n\n*   **Shaping neighbourhoods and communities** to foster social connection, livability, and safety directly meets fundamental needs of a diverse population for secure and engaging living environments.\n*   **Providing an accessible, centrally located, and well-connected public space network** ensures that all residents, regardless of background or location, have access to essential communal facilities and areas for recreation and interaction.\n*   **Establishing and growing arts and culture** enriches the physical and social fabric of the City, catering to the cultural and recreational needs of a diverse population.\n*   **Advancing an inclusive and equitable heritage program** helps meet the need for identity, belonging, and recognition among a diverse population by valuing and preserving their collective history.\n*   **Advocating for and helping guide the provision of non-municipal community facilities and services** acknowledges that a comprehensive approach is required to meet the full spectrum of needs for a diverse and growing population, extending beyond what the municipality directly provides.\n\nTogether, these objectives ensure that infrastructure development is holistic, focusing on physical spaces, social connections, cultural enrichment, historical recognition, and broader service provision, all aimed at effectively serving the varied requirements of the city's diverse and expanding population.",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "What is the title of the report mentioned in the provided context?",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# Big Ideas\n\n# WHAT WE HEARD REPORT\n\n15"
+            ],
+            "reference_answer": "WHAT WE HEARD REPORT",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Based on the provided context regarding \"Building Block 5: A healthy environment and zero carbon city,\" answer the following:",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# Building Block 5: A healthy environment and zero carbon city\n\nGlobal warming has led to rising sea levels, intensifying heat waves, more frequent and devastating wildfires, and increasingly powerful storms and floods. In 2023 the City endorsed the Climate Change Action Strategy. This strategy includes strong, science-based targets to lower community greenhouse gas emissions to net-zero by 2050.\n\n# 5a. We asked participants if we are on the right track with Building Block 5 \u2013 A healthy environment and zero carbon city. (2,710 responses)\n\n| 41%             | Looks Good           | 41% |\n| --------------- | -------------------- | --- |\n| I\u2019m Not Sure/   | Prefer Not to Answer | 17% |\n| Needs More Work | 42%                  |     |\n\n# 5b. For those who said, \u201cNeeds more work\u201d, we asked what they would change or add to the building block. (1,129 responses)\n\nKey themes that emerged:\n\n- More greenery in communities.\n- More walking and biking infrastructure.\n- Better transit options with more frequency.\n- Wider roads and more provisions for traffic congestion.\n- Implementation of sustainable building design standards and regulations.\n- Provision for government incentives for electric cars and sustainable home or business upgrades.\n\n\u201cAdd in more sidewalks for walking, more bike lines for biking and more options for public transit.\u201d\n\n\u201cBetter planning of green zones and keeping existing trees where possible.\u201d\n\n\u201cMore EV charging stations, alternate power to reduce greenhouse emissions for public buildings.\u201d\n\n\u201cIncrease safety so people can walk to more places.\u201d\n\n\u201cPolicies around trees and development.\u201d\n\nWHAT WE HEARD REPORT  11"
+            ],
+            "reference_answer": "Based on the provided context regarding \"Building Block 5: A healthy environment and zero carbon city\":\n\nThis building block addresses the impacts of global warming, such as rising sea levels, heat waves, wildfires, storms, and floods. In 2023, the City endorsed a Climate Change Action Strategy with science-based targets to achieve net-zero community greenhouse gas emissions by 2050.\n\nWhen participants were asked if the city is on the right track with this building block (2,710 responses):\n*   41% said it \"Looks Good.\"\n*   17% were \"Not Sure/Prefer Not to Answer.\"\n*   42% said it \"Needs More Work.\"\n\nFor the 1,129 participants who felt it \"Needs More Work,\" key themes for changes or additions included:\n*   More greenery in communities, better planning of green zones, and keeping existing trees.\n*   More walking and biking infrastructure (sidewalks, bike lanes).\n*   Better transit options with increased frequency.\n*   Wider roads and more provisions for traffic congestion.\n*   Implementation of sustainable building design standards and regulations.\n*   Provision for government incentives for electric cars and sustainable home or business upgrades, including more EV charging stations and alternate power for public buildings.\n*   Increased safety to encourage walking.",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Based on the \"WHAT WE HEARD REPORT\" for Building Block 2: A Thriving and Diverse Economy, identify and explain at least three distinct areas of concern or suggestions for improvement raised by participants who felt the building block \"Needs More Work.\" Support your answer with specific details or quotes from the report.",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# Building Block 2: A Thriving and Diverse Economy\n\nA growing City needs to consider employment in addition to housing. A thriving and diverse economy is one that has jobs in a variety of sectors across the City. One of the City\u2019s economic goals is to create one job for every resident worker in Surrey.\n\n# 2a.\n\nWe asked participants if we are on the right track with Building Block 2 \u2013 A thriving and diverse economy. (2,816 responses)\n\n| 58%           | Looks Good           | 58% |\n| ------------- | -------------------- | --- |\n| I\u2019m Not Sure/ | Prefer Not to Answer | 15% |\n|               | Needs More Work      | 27% |\n\n# 2b.\n\nFor those who said, \u201cNeeds more work\u201d, we asked what they would change or add to the building block. (750 responses)\n\n# Key themes that emerged:\n\n- Ensure protection of Agricultural Land Reserve.\n\u201cFood security is going to be of the utmost importance in years to come. We must insure our ALR remains intact and possibly reclaim any ALR lands that are presently being used for other purposes.\u201d\n- Prioritize development of essential services such as roads, schools, hospitals and public transit.\n- Support for small, local and diverse businesses.\n\u201cThe employment needs to be better connected with transportation.\u201d\n- Enhance local job opportunities.\n\u201cEncourage more corporate headquarters to relocate to Surrey.\u201d\n- Ensure availability of affordable housing and commercial spaces.\n\u201cCreate incentives for small and unique businesses in local communities.\u201d\n- Suggestions to promote industrial development while preserving agricultural land for local food production.\n\nWHAT WE HEARD REPORT  8"
+            ],
+            "reference_answer": "Based on the \"WHAT WE HEARD REPORT\" for Building Block 2: A Thriving and Diverse Economy, participants who felt the building block \"Needs More Work\" raised several distinct areas of concern or suggestions for improvement:\n\n1.  **Protection of Agricultural Land Reserve (ALR):** Participants emphasized the critical importance of preserving the Agricultural Land Reserve for future food security. They suggested not only keeping existing ALR intact but also potentially reclaiming lands currently used for other purposes.\n    *   **Support:** \"Food security is going to be of the utmost importance in years to come. We must insure our ALR remains intact and possibly reclaim any ALR lands that are presently being used for other purposes.\u201d\n\n2.  **Prioritization of Essential Services and Infrastructure:** There was a strong call to ensure that economic development is adequately supported by essential services and infrastructure. This includes improving connectivity between employment centers and transportation, as well as developing crucial public services.\n    *   **Support:** \"Prioritize development of essential services such as roads, schools, hospitals and public transit.\" and \"The employment needs to be better connected with transportation.\u201d\n\n3.  **Support for Small, Local, and Diverse Businesses & Enhanced Local Job Opportunities:** Participants expressed a desire for more robust support for small, local, and unique businesses within communities. They also wanted to see an increase in local job opportunities, including efforts to attract corporate headquarters to Surrey.\n    *   **Support:** \"Support for small, local and diverse businesses.\" and \"Enhance local job opportunities.\" and \"Encourage more corporate headquarters to relocate to Surrey.\" and \"Create incentives for small and unique businesses in local communities.\u201d",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Based on the provided context, what is the main subject area of the document identified as a \"WHAT WE HEARD REPORT\"?",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# Youth Engagement\n\n# WHAT WE HEARD REPORT\n\n# 12"
+            ],
+            "reference_answer": "Based on the provided context, the main subject area of the document identified as a \"WHAT WE HEARD REPORT\" is **Youth Engagement**.",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Based on the \"WHAT WE HEARD REPORT\" on page 8, what was the total number of responses received regarding preferred engagement methods, and which specific method was chosen by 27% of the participants?",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# 6. We asked participants about their preferred ways of engaging with City.\n\n(3193 responses)\n\n| Surveys                     | 74% |\n| --------------------------- | --- |\n| Open houses in person       | 43% |\n| Pop-ups at community events | 38% |\n| Discussion or focus groups  | 31% |\n| Community mapping           | 27% |\n| Webinars                    | 26% |\n| Workshops                   | 22% |\n| Interviews                  | 18% |\n| Other                       | 2%  |\n| Not interested              | 5%  |\n\n# WHAT WE HEARD REPORT\n\n8"
+            ],
+            "reference_answer": "Based on the \"WHAT WE HEARD REPORT\" on page 8:\nThe total number of responses received regarding preferred engagement methods was **3193**.\nThe specific method chosen by 27% of the participants was **Community mapping**.",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "According to the \"Utility Infrastructure\" chapter, what is the overarching goal, and how do the listed objectives collectively support the achievement of this goal? Provide specific examples from the objectives to illustrate your explanation.",
+            "query_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "# Utility Infrastructure\n\nGoal: Develop resilient grey and green utility infrastructure that is aligned with community growth.\n\n# Objectives:\n\n- Ensure utilities keep pace with growth.\n- Maintain healthy and sustainable water and sanitary infrastructure.\n- Develop resilient and integrated stormwater infrastructure.\n- Reduce solid waste and promote its diversion.\n- Increase energy independence, resilience, and sustainability."
+            ],
+            "reference_answer": "According to the \"Utility Infrastructure\" chapter, the overarching goal is to:\n\n**Develop resilient grey and green utility infrastructure that is aligned with community growth.**\n\nThe listed objectives collectively support the achievement of this goal by addressing various critical aspects of utility management, ensuring they are robust, sustainable, and capable of meeting the demands of a growing community.\n\nHere's how the objectives support the goal:\n\n1.  **Ensuring Alignment with Community Growth:**\n    *   **Objective:** \"Ensure utilities keep pace with growth.\"\n    *   **Support:** This directly addresses the \"aligned with community growth\" part of the goal. It ensures that as the community expands, the utility infrastructure (both grey and green) is adequately developed and scaled to serve the increased population and development, preventing shortages or strain on services.\n\n2.  **Developing Resilient and Sustainable Grey Infrastructure:**\n    *   **Objective:** \"Maintain healthy and sustainable water and sanitary infrastructure.\"\n    *   **Support:** This focuses on key \"grey utility infrastructure\" (water and wastewater systems). By maintaining them as \"healthy and sustainable,\" it contributes to their resilience against failures and ensures long-term viability, which is crucial for a growing community.\n    *   **Objective:** \"Develop resilient and integrated stormwater infrastructure.\"\n    *   **Support:** This specifically targets another critical \"grey and potentially green utility infrastructure\" component. Emphasizing \"resilient and integrated\" design ensures that stormwater systems can withstand extreme weather events and manage runoff effectively, protecting the community and other infrastructure.\n\n3.  **Promoting Sustainability and Resource Efficiency (Grey & Green):**\n    *   **Objective:** \"Reduce solid waste and promote its diversion.\"\n    *   **Support:** While not directly about pipes or wires, waste management is a vital utility service. Reducing waste and promoting diversion (e.g., recycling, composting) contributes to overall community sustainability, reduces the burden on landfills, and can even lead to resource recovery, making the utility system more \"sustainable\" and \"resilient\" by minimizing environmental impact.\n    *   **Objective:** \"Increase energy independence, resilience, and sustainability.\"\n    *   **Support:** Energy is a fundamental utility. By increasing its \"independence, resilience, and sustainability,\" the chapter aims to secure a reliable energy supply for the community, making the entire utility network more robust against disruptions and environmentally friendly. This supports the \"resilient grey and green utility infrastructure\" aspect by ensuring a stable power source for all other utilities and promoting sustainable energy practices.\n\nIn summary, the objectives work in concert to build a utility system that is not only physically strong and adaptable (\"resilient\") but also environmentally responsible (\"sustainable\") and capable of evolving with the community's needs (\"aligned with community growth\"), encompassing water, waste, energy, and stormwater management.",
+            "reference_answer_by": {
+                "model_name": "models/gemini-2.5-flash",
+                "type": "ai"
+            }
+        }
+    ]
+}

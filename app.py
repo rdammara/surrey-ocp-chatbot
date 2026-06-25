@@ -1,5 +1,6 @@
 import streamlit as st
-from src.engine import get_query_engine
+# FIX 1: Import the new get_chat_engine function
+from src.engine import get_chat_engine 
 
 st.set_page_config(page_title="Surrey OCP AI Assistant", layout="centered")
 
@@ -34,29 +35,12 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-#with st.sidebar:
-#    st.header("About This Tool")
-#    st.markdown("This AI assistant helps residents navigate the Surrey 2050 Official Community Plan.")
-    
-#    st.divider() 
-    
-#    st.markdown("### Official Resources")
-#    st.markdown("Need to check the exact land-use designation for your specific property?")
-    # Adds a clickable button directly to the Surrey map tool
-#    st.link_button("🗺️ Open Surrey COSMOS Lookup Tool", "https://cosmos.surrey.ca/external/")
-
-#    st.divider()
-
-#    st.markdown("### Session")
-#    if st.button("Clear & Refresh chat"):
-#        st.session_state.messages = []
-#        st.rerun()
 
 st.markdown("<h1 class='main-title'>Surrey 2050 OCP Explorer</h1>", unsafe_allow_html=True)
 st.markdown("<p class='center-text'>Ask questions about the Official Community Plan and Engagement Reports.</p>", unsafe_allow_html=True)
 
-# --- NEW: Main Page Action Bar ---
-# We create two columns. [1, 1] means they are equal width.
+
+#We create two columns. [1, 1] means they are equal width.
 col_action1, col_action2 = st.columns([1, 1])
 
 with col_action1:
@@ -66,6 +50,9 @@ with col_action1:
 with col_action2:
     if st.button("Clear & Refresh Chat", use_container_width=True):
         st.session_state.messages = []
+        # FIX: Also clear the chat memory in LlamaIndex when the user clicks refresh
+        if "chat_engine" in st.session_state:
+            st.session_state.chat_engine.reset()
         st.rerun()
 
 
@@ -73,10 +60,12 @@ with col_action2:
 #Initializing the engine with True Caching
 @st.cache_resource(show_spinner="Loading the Surrey OCP database...")
 def load_engine():
-    return get_query_engine()
+    # FIX 2: Call the correct chat engine initializer
+    return get_chat_engine()
 
-if "query_engine" not in st.session_state:
-    st.session_state.query_engine = load_engine()
+# FIX 3: Change variable name to chat_engine inside session_state
+if "chat_engine" not in st.session_state:
+    st.session_state.chat_engine = load_engine()
 
 #Chat history setup
 if "messages" not in st.session_state:
@@ -142,8 +131,8 @@ if st.session_state.messages and st.session_state.messages[-1]["role"] == "user"
                 )
                 enforced_prompt = user_prompt + invisible_rules
                 
-                #Send the ENFORCED prompt to the LLM, not the pure user_prompt
-                response_stream = st.session_state.query_engine.query(enforced_prompt)
+                #Send the ENFORCED prompt using stream_chat() instead of query()
+                response_stream = st.session_state.chat_engine.stream_chat(enforced_prompt)
                 
                 st.write("Generating answer...")
                 status.update(label="Analysis complete!", state="complete", expanded=False)
